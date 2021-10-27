@@ -20,55 +20,102 @@
         />
     </head>
     <body>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"
-        ></script>
         <header>
-            <div class="head"></div>
+            <div class="header-container"></div>
         </header>
-        <div class="container">
-            <div class="problem-link d-flex m-3 justify-content-center">
-                <label class="prob-link-text p-3 pe-5 fs-2"
-                    ><b>Problem Link :</b></label
-                >
-                <div class="col-sm-5 pt-4">
-                    <input class="form-control" id="inputLink" />
-                </div>
-            </div>
-            <div class="problem-link d-flex m-3 justify-content-center">
-                <label class="prob-link-text p-3 pe-5 ps-5 fs-2"
-                    ><b>Language :</b></label
-                >
-                <div class="col-sm-5 pt-4">
-                    <input class="form-control" id="inputLanguage" />
-                </div>
-            </div>
-            <div class="problem-link d-flex m-3 justify-content-center">
-                <label class="prob-link-text p-3 pe-5 fs-2"
-                    ><b>Time Complexity :</b></label
-                >
-                <div class="col-sm-5 pt-4">
-                    <input class="form-control" id="inputTimeComplexity" />
-                </div>
-            </div>
-            <div class="problem-link d-flex m-3 justify-content-center">
-                <label class="prob-link-text p-3 pe-5 fs-2"
-                    ><b>Space Complexity : </b></label
-                >
-                <div class="col-sm-5 pt-4">
-                    <input class="form-control" id="inputSpaceComplexity" />
-                </div>
-            </div>
-            <div class="problem-link d-flex m-3 justify-content-center">
-                <label class="prob-link-text p-3 pe-5 ps-5 fs-2"
-                    ><b>Tags :</b></label
-                >
-                <div class="col-sm-5 pt-4">
-                    <input class="form-control" id="inputTags" />
-                </div>
+        <div class="container-fluid">
+            <div class="container">
+                <form class="my-5 form-container">
+                    <div class="form-group row my-3">
+                        <label
+                            for="prob-link"
+                            class="col-sm-2 col-form-label col-lg-4 mx-auto"
+                        >
+                            <span class="fs-2 p-3">Problem Link :</span>
+                        </label>
+                        <div class="col-sm-10 col-lg-6 my-3">
+                            <input
+                                class="form-control"
+                                id="inputLink"
+                                placeholder=""
+                            />
+                        </div>
+                    </div>
+                    <div class="form-group row my-3">
+                        <label
+                            for="p-lang"
+                            class="col-sm-2 col-form-label col-lg-4 mx-auto"
+                            ><span class="fs-2 p-3">Language :</span></label
+                        >
+                        <div class="col-sm-10 col-lg-6 my-3">
+                            <!-- <input class="form-control" id="inputLanguage" placeholder="Password"> -->
+                            <select class="form-control" id="inputLanguage">
+                                <option selected>Choose...</option>
+                                <option value="1">C</option>
+                                <option value="2">C++</option>
+                                <option value="3">Java</option>
+                                <option value="3">Python</option>
+                                <option value="3">C#</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row my-3">
+                        <label
+                            for="prob-link"
+                            class="col-sm-2 col-form-label col-lg-4 mx-auto"
+                        >
+                            <span class="fs-2 p-3">Time Complexity :</span>
+                        </label>
+                        <div class="col-sm-10 col-lg-6 my-3">
+                            <input
+                                class="form-control"
+                                id="inputTimeComplexity"
+                                placeholder=""
+                            />
+                        </div>
+                    </div>
+                    <div class="form-group row my-3">
+                        <label
+                            for="prob-link"
+                            class="col-sm-2 col-form-label col-lg-4 mx-auto"
+                        >
+                            <span class="fs-2 p-3">Space Complexity :</span>
+                        </label>
+                        <div class="col-sm-10 col-lg-6 my-3">
+                            <input
+                                class="form-control"
+                                id="inputSpaceComplexity"
+                                placeholder=""
+                            />
+                        </div>
+                    </div>
+                    <div class="form-group row my-3">
+                        <label
+                            for="prob-link"
+                            class="col-sm-2 col-form-label col-lg-4 mx-auto"
+                        >
+                            <span class="fs-2 p-3">Tags :</span>
+                        </label>
+                        <div class="col-sm-10 col-lg-6 my-3">
+                            <input
+                                class="form-control"
+                                id="inputTags"
+                                placeholder=""
+                            />
+                        </div>
+                    </div>
+                    <div class="button-class d-flex m-5 justify-content-center">
+                        <button
+                            type="button"
+                            id="btnId"
+                            class="btn btn-primary btn-lg"
+                        >
+                            Generate
+                        </button>
+                    </div>
+                </form>
             </div>
         </div>
+        <script src="app.js"></script>
     </body>
 </html>
