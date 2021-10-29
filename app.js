@@ -9,6 +9,7 @@ const tagsSelect = document.getElementById("inputTags");
 const outputMd = document.getElementById("output");
 
 const genBtn = document.getElementById("btnId");
+const copyBtn = document.getElementById("cpyBtn");
 
 let genre,
     nameOfProblem,
@@ -19,6 +20,11 @@ let genre,
     spaceComplexity,
     tags,
     fileName;
+
+function copyFunction() {
+    outputMd.select();
+    navigator.clipboard.writeText(outputMd.value);
+}
 
 genBtn.addEventListener("click", () => {
     genre = probGenre.value;
@@ -42,4 +48,8 @@ genBtn.addEventListener("click", () => {
     let mdStr = `|  [${nameOfProblem}](${url})                                                           | [${lang}](./${genre}/${fileName}.${lang})                                                                             | _O(${timeComplexity})_          | _O(${spaceComplexity})_                | ${diff}                 | ${tags}                        |`;
 
     outputMd.value = mdStr;
+});
+
+copyBtn.addEventListener("click", () => {
+    copyFunction();
 });
